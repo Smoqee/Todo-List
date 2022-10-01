@@ -4,44 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" /></head>
+    <title>Todo-List</title>
+</head>
 <body>
+    <div class="new-task hidden">
+        <div class="form">
+            <h2>New Task</h2>
+            <input type="text" id="task-description" placeholder="Description">
+            <input type="date" id="task-date">
+            <button type="button">Submit</button>
+        </div>
+    </div>
+
     <div class="content">
         <div class="sidebar">
-            <div class="upper selected">
-                <span class="material-symbols-rounded">home</span>
-                <p>Home</p>
+            <div class="inbox">
+                <p>Inbox</p>
             </div>
-
-            <div class="lower">
-                <div class="project-creation">
-                    <input type="text" class="create-project-field" placeholder="Create Project">
+            <div class="projects">
+                <div class="project-list-head">
+                    <p class="light-text">Projects</p>
+                    <p class="light-text creation">Create Project +</p>
                 </div>
-                <div class="project-list" data-project="Work">
-                    <div class="project-title">
-                        <span class="dot title-dot"></span>
-                        <p>Work</p>
-                        <button class="add-todo-button">Add</button>
-                    </div>
-                    <div class="project-item">
-                        <span class="dot todo-dot"></span>
-                        <p>Send Mail</p>
-                    </div>
-                    <div class="project-item">
-                        <span class="dot todo-dot"></span>
-                        <p>Presentation</p>
-                    </div>
-                    <div class="project-item">
-                        <span class="dot todo-dot"></span>
-                        <p>New Car</p>
-                    </div>
+                <div class="project-list">
                 </div>
             </div>
         </div>
 
         <div class="main-content">
-            
+            <h1>Inbox</h1>
+            <div class="task-list" data-project="INBOX">
+            </div>
+            <p class="light-text">Create Task</p>
         </div>
     </div>
 </body>
